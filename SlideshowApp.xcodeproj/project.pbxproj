@@ -13,6 +13,7 @@
 		E295651627D5D1A600902B3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E295651427D5D1A600902B3E /* Main.storyboard */; };
 		E295651827D5D1A800902B3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E295651727D5D1A800902B3E /* Assets.xcassets */; };
 		E295651B27D5D1A800902B3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E295651927D5D1A800902B3E /* LaunchScreen.storyboard */; };
+		E295652727D5DEB900902B3E /* EnlargedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E295652627D5DEB900902B3E /* EnlargedImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E295651727D5D1A800902B3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E295651A27D5D1A800902B3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E295651C27D5D1A800902B3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E295652627D5DEB900902B3E /* EnlargedImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargedImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				E295650E27D5D1A600902B3E /* AppDelegate.swift */,
 				E295651027D5D1A600902B3E /* SceneDelegate.swift */,
 				E295651227D5D1A600902B3E /* ViewController.swift */,
+				E295652627D5DEB900902B3E /* EnlargedImageViewController.swift */,
 				E295651427D5D1A600902B3E /* Main.storyboard */,
 				E295651727D5D1A800902B3E /* Assets.xcassets */,
 				E295651927D5D1A800902B3E /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E295652727D5DEB900902B3E /* EnlargedImageViewController.swift in Sources */,
 				E295651327D5D1A600902B3E /* ViewController.swift in Sources */,
 				E295650F27D5D1A600902B3E /* AppDelegate.swift in Sources */,
 				E295651127D5D1A600902B3E /* SceneDelegate.swift in Sources */,
