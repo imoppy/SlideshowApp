@@ -11,6 +11,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var slideImage: UIImageView!
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
 
     var fileName: String = "1"
     let fileCount: Int = 7
@@ -41,12 +43,9 @@ class ViewController: UIViewController {
 
     @IBAction func playButton(_ sender: Any) {
         if self.timer == nil {
-            playButton.setTitle("stop", for: .normal)
-            self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(autoPlay(_:)), userInfo: nil, repeats: true)
+            startAutoPlay()
         } else {
-            playButton.setTitle("play", for: .normal)
-            self.timer.invalidate()
-            self.timer = nil
+            stopAutoPlay()
         }
     }
     
@@ -60,8 +59,32 @@ class ViewController: UIViewController {
         slideImage.image = UIImage(named: fileName)
     }
     
+    func startAutoPlay() {
+        backButton.isEnabled = false
+        nextButton.isEnabled = false
+        playButton.setTitle("stop", for: .normal)
+        self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(autoPlay(_:)), userInfo: nil, repeats: true)
+    }
+    
+    func stopAutoPlay() {
+        backButton.isEnabled = true
+        nextButton.isEnabled = true
+        playButton.setTitle("play", for: .normal)
+        if self.timer != nil {
+            self.timer.invalidate()
+            self.timer = nil
+        }
+    }
+
     @objc func autoPlay(_ timer: Timer) {
         next()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        stopAutoPlay()
+
+        let imageViewController:ImageViewController = segue.destination as! ImageViewController
+        imageViewController.fileName = fileName
     }
     
     @IBAction func unwind(_ seque: UIStoryboardSegue) {
